@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:background="@android:drawable/edit_text"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password (min 6)"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:background="@android:drawable/edit_text"
+            android:layout_below="@id/emailInput"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/passwordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:background="@android:drawable/edit_text"
+            android:layout_below="@id/passwordInput"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign up"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#2E7D32"
+            android:layout_below="@id/passwordConfirm"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</RelativeLayout>
