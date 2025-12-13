@@ -15,7 +15,7 @@ public class Task {
 
     public Task(int id, int userId, String task, String category,
                 String priority, String notes,
-                String dueDate, String dueTime, int completed) {
+                int completed) {
 
         this.id = id;
         this.userId = userId;

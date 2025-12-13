@@ -38,7 +38,7 @@ public class SuccessActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SuccessActivity.this, TodoListActivity.class);
+                Intent intent = new Intent(SuccessActivity.this, TasksActiviy.class);
                 startActivity(intent);
                 finish(); // ferme SuccessActivity
             }
