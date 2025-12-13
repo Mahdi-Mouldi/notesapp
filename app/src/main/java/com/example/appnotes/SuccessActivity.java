@@ -2,6 +2,8 @@ package com.example.appnotes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,10 +26,22 @@ public class SuccessActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.welcomeText);
         if (textView != null) {
             if (email != null && !email.isEmpty()) {
-                textView.setText("Welcome, " + email + "!");
+                String username = email.split("@")[0];
+                textView.setText("Welcome, " + username + "!");
             } else {
                 textView.setText("Welcome!");
             }
         }
+
+        // ====== Redirection automatique après 3 secondes ======
+        int delayMillis = 3000; // 3 secondes
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SuccessActivity.this, TodoListActivity.class);
+                startActivity(intent);
+                finish(); // ferme SuccessActivity
+            }
+        }, delayMillis);
     }
 }
